@@ -1,8 +1,10 @@
 var express = require('express');
 const path = require('path');
 var bodyParser = require('body-parser');
+var passport = require('passport');
 var routes = require('./routes');
 var db_connect = require('./lib/db_connect')();
+require('./lib/passport')(passport);
 
 var app = express();
 
