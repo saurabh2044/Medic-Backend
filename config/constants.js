@@ -1,8 +1,8 @@
 module.exports = {
   MONGO_DB: {
-    URI: 'mongodb://localhost:27017/saurabh',
-    // process.env.MONGODB_URI ||
-    // 'mongodb://saurabh:password@ds227858.mlab.com:27858/medicdb',
+    URI:
+      process.env.MONGODB_URI ||
+      'mongodb://saurabh:password@ds227858.mlab.com:27858/medicdb',
   },
   SECRET_KEY: 'tp4JjBQNl01w+6FStJU1PHIKSI7RpofyqMelmm3x',
   ERROR_TYPES: {
