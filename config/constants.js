@@ -1,5 +1,6 @@
 module.exports = {
   MONGO_DB: {
+    // URI: 'mongodb://localhost:27017/saurabh',
     URI:
       process.env.MONGODB_URI ||
       'mongodb://saurabh:password@ds227858.mlab.com:27858/medicdb',
@@ -30,6 +31,25 @@ module.exports = {
       FRIDAY: 'friday',
       SATURDAY: 'saturday',
       SUNDAY: 'sunday',
+    },
+    VERIFICATION: {
+      INPROCESS: 'in_process',
+      APPROVED: 'approved',
+      CANCELLED: 'cancelled',
+    },
+    PAYMENT_STATUS: {
+      INPROCESS: 'in_process',
+      PAID: 'paid',
+      REFUNDED: 'refunded',
+    },
+    BOOKING_STATUS: {
+      INPROCESS: 'in_process',
+      APPROVED: 'approved',
+      CANCELLED: 'cancelled',
+    },
+    CONDITION: {
+      NORMAL: 'normal',
+      EMERGENCY: 'emergency',
     },
   },
 };

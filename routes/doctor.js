@@ -38,4 +38,21 @@ router.post(
   }
 );
 
+router.post(
+  '/allSlot',
+  Passport.authenticate('jwt', { session: false }),
+  function(req, res, next) {
+    slotLib.getAllSlotsOfDay(req.user._id, req.body.day, function(
+      err,
+      fetchedInstance
+    ) {
+      if (err) {
+        res.status(500).json(err);
+        return;
+      }
+      res.status(200).json(fetchedInstance);
+    });
+  }
+);
+
 module.exports = router;
